@@ -1,0 +1,225 @@
+@import '../../styles/utils';
+
+.Header {
+  position: relative;
+  height: 100vh;
+  max-width: $maxWidth;
+  margin: 0 auto;
+
+  background-image: url('../../images/header.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    margin: 48px 36px;
+    height: 205px;
+    width: 155px;
+
+    @include mediaMaxWidth {
+      height: 150px;  
+      width: 115px;
+      margin: 32px;
+    }
+
+    @include mediaMaxWidth($mobileWidth) {
+      top: 24px;
+      left: 20px;
+      height: 84px;
+      width: 64px;
+      margin: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 16vw;
+    // line-height: 100px;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+
+    @include mediaMaxWidth {
+      font-size: 14vw;
+    }
+  }
+
+  &__info {
+    position: relative;
+  }
+
+  &__small-titles {
+    position: relative;
+    color: $c-title;
+
+    @include mediaMaxWidth($mobileWidth) {
+      top: 40%;
+    }
+
+    &--upper {    
+      height: 48px;
+      width: 60%;
+
+      margin-bottom: 10px;
+
+      border-radius: 0 0 40px 0;
+
+      background-color: #fff;
+      text-align: center;
+      
+      font-family: "MyanmarMN", sans-serif;
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: 3px;
+
+      @include mediaMaxWidth(960px) {
+        height: 36px;
+        font-size: 36px;
+        border-radius: 0 0 32px 0;
+      }
+
+      @include mediaMaxWidth {
+        height: 24px;
+        font-size: 24px;
+        border-radius: 0 0 20px 0;
+      }
+
+      @include mediaMaxWidth($mobileWidth) {
+        margin-bottom: 4px;
+
+        height: 16px;
+        font-size: 16px;
+        border-radius: 0 0 8px 0;
+        min-width: $minWidth;
+      }
+    }
+
+    &--lower {
+      position: relative;
+      left: 160px;
+      
+      height: 40px;
+      width: 40%;
+      margin-bottom: 16px;
+
+      border-radius: 32px 0 0 0;
+
+      background-color: #fff;
+      text-align: center;
+      
+      font-family: "MyanmarMN", sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+
+      @include mediaMaxWidth($contentMaxWidth) {
+        left: 80px;
+      }
+
+      @include mediaMaxWidth($desktopTabletTransition) {
+        height: 28px;
+        font-size: 28px;
+        border-radius: 20px 0 0 0;
+      }
+
+      @include mediaMaxWidth {
+        height: 20px;
+        font-size: 20px;
+        border-radius: 16px 0 0 0;
+      }
+
+      @include mediaMaxWidth($mobileWidth) {
+        height: 14px;
+        font-size: 14px;
+        border-radius: 6px 0 0 0;
+        min-width: 240px;
+      }
+    }
+  }
+
+  &__additional-info {
+    position: relative;
+    left: 20vw;
+
+    width: 20%;
+    min-width: max-content;
+
+    font-family: "MyanmarMN", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+
+    @include mediaMaxWidth($desktopTabletTransition) {
+      left: 16vw;
+    }
+
+    @include mediaMaxWidth {
+      font-size: 16px;
+    }
+
+    @include mediaMaxWidth($mobileWidth) {
+      display: none;
+    }
+
+    &--lines {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &--words {
+      margin-right: 20px;
+    }
+  }
+
+  &__Form {
+    display: flex;
+    float: right;
+    position: relative;
+    top: -168px;
+    width: 300px;
+    transition: transform 1s ease-in-out;
+
+    @include mediaMaxWidth {
+      top: 10px;
+    }
+
+    @include mediaMaxWidth($mobileWidth) {
+      float: none;
+      top: 120px;
+      left: -300px;
+    }
+
+    @include mediaMaxWidth($minWidth) {
+      width: 288px;
+    }
+
+    &--hidden {
+      transform: translateX(300px);
+    }
+  }
+
+  &__Form-button {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: -32px;
+
+    height: 32px;
+    width: 80px;
+
+    border-radius: 16px 16px 0 0;
+    background-color: $c-title;
+    border: none;
+    color: $c-formTextColor;
+
+    transform-origin: 0 80px;
+    transform: rotate(90deg);
+
+    @include mediaMaxWidth($mobileWidth) {
+      display: unset;
+    }
+  }
+}

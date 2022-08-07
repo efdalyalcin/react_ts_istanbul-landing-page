@@ -1,0 +1,97 @@
+@import '../../styles/utils';
+
+.Form {
+  padding: 20px;
+  border-radius: 16px;
+  background-color: $c-title;
+  text-align: center;
+  color: $c-formTextColor;
+  
+  &__title {
+    margin-bottom: 8px;
+    font-family: "Arquitecta Bold", sans-serif;
+  }
+
+  &__inputs {
+    width: 100%;
+    margin-bottom: 8px;
+
+    border: none;
+    border-bottom: 1px solid $c-formTextColor;
+    background-color: transparent;
+    line-height: 24px;
+    color: $c-formTextColor;
+    
+    &::placeholder{
+      position: relative;
+      left: 8px;
+      color: $c-formTextColor;
+    } 
+  }
+
+  &__inputs:focus {
+    outline: 1px solid $c-formTextColor;
+    color: $c-formTextColor;
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__check-area {
+    padding: 8px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 12px;
+  }
+  
+  &__circle-checkbox {
+    width: 1em;
+    height: 1em;
+    background-color: $c-formTextColor;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__circle-checkbox:checked {
+    background-color: $c-title;
+  }
+
+  &__aggrement {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  &__aggrement-checkbox {
+    position: relative;
+    top: 4px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 8px;
+    color: $c-title;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: $c-formTextColor;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+}
